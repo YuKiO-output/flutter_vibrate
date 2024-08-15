@@ -12,6 +12,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.android.library'
+}
+
 rootProject.allprojects {
     repositories {
         google()
@@ -19,9 +23,7 @@ rootProject.allprojects {
     }
 }
 
-plugins {
-    id 'com.android.library'
-}
+
 
 android {
     namespace "flutter.plugins.vibrate"
