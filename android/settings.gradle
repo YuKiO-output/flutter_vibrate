@@ -1,1 +1,14 @@
 rootProject.name = 'vibrate'
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == "com.android" || requested.id.namespace == "org.jetbrains.kotlin") {
+                useModule("com.android.tools.build:gradle:7.0.2")
+            }
+        }
+    }
+}
