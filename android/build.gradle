@@ -1,3 +1,8 @@
+
+plugins {
+    id 'com.android.library'
+}
+
 group 'flutter.plugins.vibrate.vibrate'
 version '1.0-SNAPSHOT'
 
@@ -12,9 +17,6 @@ buildscript {
     }
 }
 
-plugins {
-    id 'com.android.library'
-}
 
 rootProject.allprojects {
     repositories {
