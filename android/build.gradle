@@ -1,10 +1,9 @@
-
 plugins {
     id 'com.android.library'
 }
 
-group 'flutter.plugins.vibrate.vibrate'
-version '1.0-SNAPSHOT'
+group = 'flutter.plugins.vibrate.vibrate'
+version = '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
@@ -17,15 +16,12 @@ buildscript {
     }
 }
 
-
 rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
     }
 }
-
-
 
 android {
     namespace "flutter.plugins.vibrate"
@@ -42,3 +38,4 @@ android {
         disable 'InvalidPackage'
     }
 }
+
