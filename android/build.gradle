@@ -1,11 +1,25 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android' // Kotlinが必要な場合
+group 'flutter.plugins.vibrate.vibrate'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.2'
+    }
 }
 
-// `group` や `version` は `plugins` ブロックの後に配置します。
-group = 'flutter.plugins.vibrate.vibrate'
-version = '1.0-SNAPSHOT'
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
 
 android {
     namespace "flutter.plugins.vibrate"
@@ -18,17 +32,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     lintOptions {
         disable 'InvalidPackage'
     }
-}
-
-repositories {
-    google()
-    mavenCentral()
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
